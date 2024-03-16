@@ -1,0 +1,723 @@
+:root {
+    --midBlue: #002b8c;
+    --darkgrey: #7d7d7d;
+    --textBlue: #001950;
+    --white: #fff;
+    --lightGrey: #f7f7f7;
+    --lightBlue: #00c8fa;
+}
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url(../font/font/ROBOTO/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: CronosBold;
+    src: url(../font/font/CRONOS/CronosPro-Bold.otf );
+}
+
+@font-face {
+    font-family: CronosRegular;
+    src: url(../font/font/CRONOS/CronosPro-Regular.otf );
+}
+
+* {
+    font-family: CronosRegular;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    background: rgb(1, 20, 115);
+    background: linear-gradient(135deg, rgba(1, 20, 115, 1) 50%, rgba(55, 191, 235, 1) 92%);
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/*INICIO*/
+.button-middle {
+    margin-top: 20px;
+    background-color: var(--lightBlue);
+    color: var(--white);
+    width: 190px;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.button-usuario {
+    margin-top: 20px;
+    background-color: var(--lightBlue);
+    color: var(--white);
+    width: 190px;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+#parra-start {
+    font-size: 12px;
+    margin-top: 6.5%;
+}
+
+/*FORMULARIO*/
+
+/* Estilos para centrar el formulario */
+.container {
+    text-align: center;
+}
+
+.img-principal {
+    height: 230px;
+    width: auto;
+}
+
+.logo {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    width: auto;
+    height: 90px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.form-cedula {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.buscar_cedula {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-juntos {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+.search_lupa {
+    border-radius: 15px;
+    height: 22px;
+    border: none;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+.lupa {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 33%;
+    right: 6px;
+    /* Ajusta la distancia desde el lado derecho */
+    transform: translateY(-40%);
+}
+
+.input-cedula {
+    width: 280px;
+    padding: 9px;
+    margin-bottom: 7px;
+    border-radius: 50px;
+    height: 15px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+/*Clases de los inputs*/
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Estilos para los inputs */
+.input {
+    width: 300px;
+    padding: 13px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    height: 15px;
+    border: none;
+    outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    color: var(--midBlue);
+    font-size: 18px;
+}
+
+.input::placeholder {
+    color: var(--midBlue);
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.input-cedula::placeholder {
+    color: var(--midBlue);
+    font-size: 18px;
+    font-weight: 550;
+}
+
+/*Seleccionar las multimedia*/
+.select-multimedia {
+    width: 300px;
+    height: 32px;
+    padding: 8px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: CronosRegular !important;
+    color: var(--midBlue);
+}
+
+.select-multimedia:disabled {
+    background-color: lightblue;
+}
+
+/*input de la descripcion*/
+.descripcion {
+    width: 300px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    padding: 14px;
+    resize: none;
+}
+
+.descripcion::placeholder {
+    color: var(--midBlue);
+    font-size: 20px;
+    font-weight: 550;
+}
+
+/*CAJA*/
+.box {
+    width: 300px;
+    height: 50px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Estilos de selecconar archivo*/
+.file-select {
+    position: relative;
+    display: inline-block;
+    height: 35px !important;
+    width: 130px !important;
+}
+
+.file-select::before {
+    background-color: #00c8fa;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    content: 'Seleccionar';
+    /* testo por defecto */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-bottom: 5px;
+
+}
+
+.file-select input[type="file"] {
+    opacity: 0;
+    width: 160px;
+    height: 80px;
+    display: inline-block;
+}
+
+#src-file1::before {
+    content: ' + Subir pantallazo';
+}
+
+/* Estilos para el botón */
+.button {
+    background-color: var(--lightBlue);
+    color: var(--white);
+    width: 100px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.parraf {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 2.5%;
+}
+
+/*ESTILOS PARA EL TICKET*/
+.img-finaly {
+    margin-top: 10%;
+}
+
+.text-finaly {
+    font-size: 80px;
+}
+
+.message {
+    font-size: 50px;
+    text-align: center;
+    width: 240px;
+    height: auto;
+    background-color: #00c8fa;
+    border-radius: 40px;
+    border-color: #00c8fa;
+    color: midnightblue;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+#parra-finaly {
+    font-size: 12px;
+    margin-top: 10%;
+}
+
+/*Responsive Queries*/
+@media (max-width: 769px) {
+
+    /* ESTE LOGO ES EL GENERAL DE LAS 2 PAGINAS (Formulario, Ticket) */
+    .logo {
+        width: auto;
+        height: 65px;
+    }
+
+    /* PARA EL INICIO.HTML */
+    .imgs-start {
+        margin-top: 10%;
+    }
+
+    .img-middle {
+        height: auto;
+        width: 490px;
+    }
+
+    /* PARA EL FORMULARIO.PHP */
+    .img-principal {
+        height: 170px;
+        width: auto;
+    }
+
+    .parraf {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    /* PARA EL TICKET.PHP */
+    .img-finaly {
+        margin-top: 20%;
+        height: 100px;
+        width: auto;
+    }
+
+    .text-finaly {
+        font-size: 50px;
+    }
+
+    .message {
+        font-size: 40px;
+        text-align: center;
+        width: 180px;
+        height: auto;
+        background-color: #00c8fa;
+        border-radius: 40px;
+        border-color: #00c8fa;
+        color: midnightblue;
+        font-weight: bold;
+        border: none;
+        outline: none;
+    }
+
+    #parra-finaly {
+        font-size: 8px;
+        padding: 8px;
+        margin-top: 27%;
+    }
+}
+
+@media (max-width: 700px) {
+
+    /* ESTE LOGO ES EL GENERAL DE LAS 2 PAGINAS (Formulario, Ticket) */
+    .logo {
+        width: auto;
+        height: 50px;
+    }
+
+    /* PARA EL INICIO.HTML */
+    .imgs-start {
+        margin-top: 15%;
+    }
+
+    .img-middle {
+        height: auto;
+        width: 450px;
+    }
+
+    .button-middle {
+        width: 180px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    /* PARA EL FORMULARIO.PHP */
+    .img-principal {
+        height: 170px;
+        width: auto;
+    }
+
+    .parraf {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    /* PARA EL TICKET.PHP */
+    .img-finaly {
+        margin-top: 35%;
+        height: 100px;
+        width: auto;
+    }
+
+    .text-finaly {
+        font-size: 40px;
+    }
+
+    .message {
+        font-size: 40px;
+        text-align: center;
+        width: 180px;
+        height: auto;
+        background-color: #00c8fa;
+        border-radius: 40px;
+        border-color: #00c8fa;
+        color: midnightblue;
+        font-weight: bold;
+        border: none;
+        outline: none;
+    }
+
+    #parra-finaly {
+        font-size: 8px;
+        padding: 8px;
+        margin-top: 40%;
+    }
+
+}
+
+@media (max-width: 590px) {
+
+    /* ESTE LOGO ES EL GENERAL DE LAS 2 PAGINAS (Formulario, Ticket) */
+    .logo {
+        width: auto;
+        height: 50px;
+    }
+
+    /* PARA EL INICIO.HTML */
+    .imgs-start {
+        margin-top: 20%;
+    }
+
+    .img-middle {
+        width: 350px;
+        height: auto;
+    }
+
+    .button-middle {
+        width: 160px;
+        height: 42px;
+        font-size: 20px;
+    }
+
+    .parrafo {
+        margin-top: 40%;
+    }
+
+    /* PARA EL FORMULARIO.PHP */
+    .img-principal {
+        height: 170px;
+        width: auto;
+    }
+
+    .parraf {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    /* PARA EL TICKET.PHP */
+    .img-finaly {
+        margin-top: 38%;
+        height: 100px;
+        width: auto;
+    }
+
+    .text-finaly {
+        font-size: 40px;
+    }
+
+    .message {
+        font-size: 40px;
+        text-align: center;
+        width: 180px;
+        height: auto;
+        background-color: #00c8fa;
+        border-radius: 40px;
+        border-color: #00c8fa;
+        color: midnightblue;
+        font-weight: bold;
+        border: none;
+        outline: none;
+    }
+
+    #parra-finaly {
+        font-size: 8px;
+        padding: 8px;
+        margin-top: 50%;
+    }
+
+    /* PARA EL TICKET.PHP */
+    .img-finaly {
+        margin-top: 35%;
+        height: 100px;
+        width: auto;
+    }
+
+    .text-finaly {
+        font-size: 40px;
+    }
+
+    .message {
+        font-size: 40px;
+        text-align: center;
+        width: 180px;
+        height: auto;
+        background-color: #00c8fa;
+        border-radius: 40px;
+        border-color: #00c8fa;
+        color: midnightblue;
+        font-weight: bold;
+        border: none;
+        outline: none;
+    }
+
+    #parra-finaly {
+        font-size: 8px;
+        padding: 8px;
+        margin-top: 40%;
+    }
+
+}
+
+@media (max-width: 421px) {
+
+    /* ESTE LOGO ES EL GENERAL DE LAS 2 PAGINAS (Formulario, Ticket) */
+    .logo {
+        width: auto;
+        height: 40px;
+    }
+
+    /* PARA EL INICIO.HTML */
+    .img-middle {
+        width: 370px;
+        height: auto;
+    }
+
+    .button-middle {
+        width: 140px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .parrafo {
+        margin-top: 45%;
+    }
+
+    /* PARA EL FORMULARIO.PHP */
+    .img-principal {
+        height: 170px;
+        width: auto;
+    }
+
+    .parraf {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    /* PARA EL TICKET.PHP */
+    .img-finaly {
+        margin-top: 38%;
+        height: 100px;
+        width: auto;
+    }
+
+    .text-finaly {
+        font-size: 40px;
+    }
+
+    .message {
+        font-size: 40px;
+        text-align: center;
+        width: 180px;
+        height: auto;
+        background-color: #00c8fa;
+        border-radius: 40px;
+        border-color: #00c8fa;
+        color: midnightblue;
+        font-weight: bold;
+        border: none;
+        outline: none;
+    }
+
+    #parra-finaly {
+        font-size: 8px;
+        padding: 8px;
+        margin-top: 50%;
+    }
+}
+
+@media (max-width: 355px) {
+
+    /* ESTE LOGO ES EL GENERAL DE LAS 2 PAGINAS (Formulario, Ticket) */
+    .logo {
+        width: auto;
+        height: 30px;
+    }
+
+    /* PARA EL INICIO.HTML */
+    .imgs-start {
+        margin-top: 40%;
+    }
+
+    .img-middle {
+        width: 300px;
+        height: auto;
+    }
+
+    .button-middle {
+        width: 120px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .parrafo {
+        font-size: 8px;
+        margin-top: 54%;
+    }
+
+    /* PARA EL FORMULARIO.PHP */
+    .img-principal {
+        height: 150px;
+        width: auto;
+    }
+
+    .input-cedula {
+        width: 260px;
+        height: 32px;
+    }
+
+    .input-cedula::placeholder {
+        font-size: 15px;
+    }
+
+    .input {
+        width: 280px;
+        height: 32px;
+    }
+
+    .input::placeholder {
+        font-size: 15px;
+    }
+
+    .select-multimedia {
+        width: 280px;
+        height: 32px;
+        font-size: 15px;
+    }
+
+    .descripcion {
+        width: 280px;
+        height: 150px;
+        font-size: 10px;
+    }
+
+    .descripcion::placeholder {
+        font-size: 15px;
+    }
+
+    .parraf {
+        font-size: 8px;
+        text-align: center;
+    }
+
+    .box {
+        padding: 10px;
+    }
+
+    /* PARA EL TICKET.PHP */
+    .img-finaly {
+        margin-top: 40%;
+        height: 100px;
+        width: auto;
+    }
+
+    .text-finaly {
+        font-size: 30px;
+    }
+
+    .message {
+        font-size: 40px;
+        text-align: center;
+        width: 180px;
+        height: auto;
+        background-color: #00c8fa;
+        border-radius: 40px;
+        border-color: #00c8fa;
+        color: midnightblue;
+        font-weight: bold;
+        border: none;
+        outline: none;
+    }
+
+    #parra-finaly {
+        font-size: 8px;
+        padding: 8px;
+        margin-top: 75%;
+    }
+}

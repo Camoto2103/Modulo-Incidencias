@@ -1,0 +1,84 @@
+:root {
+    --midBlue: #002b8c;
+    --darkgrey: #7d7d7d;
+    --textBlue: #001950;
+    --white: #fff;
+    --lightGrey: #f7f7f7;
+    --lightBlue: #00c8fa;
+    height: 100vh;
+    width: 100vw;
+}
+ 
+@font-face {
+    font-family: RobotoRegular;
+    src: url(../font/font/ROBOTO/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: CronosBold;
+    src: url(../font/font/CRONOS/CronosPro-Bold.otf );
+}
+
+@font-face {
+    font-family: CronosRegular;
+    src: url(../font/font/CRONOS/CronosPro-Regular.otf );
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    background: rgb(1, 20, 115);
+    background: linear-gradient(135deg, rgba(1, 20, 115, 1) 50%, rgba(55, 191, 235, 1) 92%);
+    color: var(--white);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    height: 320px;
+    width: 300px;
+    text-align: center;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container h2 {
+    color: var(--textBlue);
+    font-family: CronosBold;
+    font-size: 26px;
+}
+
+.login-container input {
+    margin: 10px;
+    font-family: RobotoRegular;
+}
+
+.login-container input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 20px;
+    outline: none;
+}
+
+.login-container input[type="submit"] {
+    background-color: var(--textBlue);
+    color: #fff;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+}

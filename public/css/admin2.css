@@ -1,0 +1,204 @@
+:root {
+    --midBlue: #002b8c;
+    --darkgrey: #7d7d7d;
+    --textBlue: #001950;
+    --white: #fff;
+    --lightGrey: #f7f7f7;
+    --lightBlue: #00c8fa;
+}
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url(../font/font/ROBOTO/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: CronosBold;
+    src: url(../font/font/CRONOS/CronosPro-Bold.otf );
+}
+
+@font-face {
+    font-family: CronosRegular;
+    src: url(../font/font/CRONOS/CronosPro-Regular.otf );
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(1, 20, 115, 1) 50%, rgba(55, 191, 235, 1) 92%);
+    color: var(--white) !important;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;
+    height: 90px;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-family: CronosBold;
+}
+
+.center-table {
+    text-align: center;
+}
+
+#tablate {
+    margin-top: 20px;
+    display: inline-block;
+    width: 82vw;
+    height: 75vh;
+    border-radius: 5px;
+    overflow: auto;
+    font-family: RobotoRegular;
+    background-color: #f7f7f7 !important;
+}
+
+#tablate thead {
+    background-color: var(--darkgrey);
+    width: 100%;
+}
+
+
+#tablate th {
+    padding: 5px 10px;
+}
+
+#tablate td {
+    color: #7d7d7d;
+    min-height: 50px;
+    padding: 5px 10px;
+}
+
+#tablate th {
+    background-color: #00c8fa;
+}
+
+.center-cell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.Button-Asignar {
+    width: 70px;
+    height: auto;
+    background: var(--lightBlue);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+.Button-Reasignar {
+    width: 85px;
+    height: auto;
+    background: var(--lightBlue);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+ 
+.Button-Responder {
+    margin-top: 10px;
+    width: 85px;
+    height: auto;
+    background: var(--lightBlue);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+.Button-Historico {
+    width: 85px;
+    height: auto;
+    background: var(--lightBlue);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+.Button-Ver {
+    margin: 0 auto;
+    width: 40px;
+    height: auto;
+    background: var(--lightBlue);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Estilos para las pestañas */
+.tab {
+    display: none;
+}
+
+/* Estilos para los botones de pestañas */
+.tab-button {
+    cursor: pointer;
+    width: 200px;
+    height: auto;
+    background: var(--lightBlue);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+/* 
+    PARA EL SCROLLBAR (Chrome, Safari y Firefox)
+*/
+
+/* Para navegadores basados en WebKit (Chrome y Safari) */
+/* Ancho del scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Color de fondo del scrollbar */
+::-webkit-scrollbar-track {
+    background: var(--lightGrey);
+}
+
+/* Color del thumb (la parte deslizable del scrollbar) */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Cambia el color del thumb cuando se desplaza */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Para Firefox */
+/* Ancho del scrollbar */
+* {
+    scrollbar-width: thin; /* Puede ser "auto" o "thin" */
+}
+
+/* Color del thumb (la parte deslizable del scrollbar) */
+* {
+    scrollbar-color: #888 #f1f1f1; /* thumb-color track-color */
+}
+
+/* Cambia el color del thumb cuando se desplaza */
+*:hover {
+    scrollbar-color: #555 #f1f1f1; /* thumb-color track-color */
+}

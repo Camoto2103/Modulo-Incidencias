@@ -1,0 +1,175 @@
+:root {
+    --midBlue: #002b8c;
+    --darkgrey: #7d7d7d;
+    --textBlue: #001950;
+    --white: #fff;
+    --lightGrey: #f7f7f7;
+    --lightBlue: #00c8fa;
+}
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url(../font/font/ROBOTO/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: CronosBold;
+    src: url(../font/font/CRONOS/CronosPro-Bold.otf );
+}
+
+@font-face {
+    font-family: CronosRegular;
+    src: url(../font/font/CRONOS/CronosPro-Regular.otf );
+}
+
+body {
+    background: linear-gradient(135deg, rgba(1, 20, 115, 1) 50%, rgba(55, 191, 235, 1) 92%);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;
+    height: 90px;
+}
+
+.header {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-family: CronosBold;
+}
+
+/*TENER TODO ALINIANDO EN LA MITAD DEL BODY*/
+/* .principal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+} */
+
+#tablate {
+    background-color: white;
+    margin-top: 20px;
+    font-family: RobotoRegular;
+    display: inline-block;
+    width: 82vw;
+    height: 75vh;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+#tablate thead {
+    background-color: var(--lightBlue);
+    color: var(--white);
+}
+
+#tablate th {
+    width: 1%;
+    padding: 15px;
+}
+
+#tablate td {
+    width: 1%;
+    color: #7d7d7d;
+    min-height: 50px;
+    padding: 5px 18px;
+}
+
+.Button-Asignar {
+    width: 70px;
+    height: auto;
+    background: var(--lightBlue);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+.Button-Reasignar {
+    width: 85px;
+    height: auto;
+    background: var(--lightBlue);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+.Button-Historico {
+    width: 85px;
+    height: auto;
+    background: var(--lightBlue);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+/*PAGINACION PARA LAS TABLAS DE LA INDCIDENCIA*/
+.pagination {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.pagination ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pagination li {
+    display: inline;
+    margin-right: 5px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--lightBlue);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+/* 
+    PARA EL SCROLLBAR (Chrome, Safari y Firefox)
+*/
+
+/* Para navegadores basados en WebKit (Chrome y Safari) */
+/* Ancho del scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Color de fondo del scrollbar */
+::-webkit-scrollbar-track {
+    background: var(--lightGrey);
+}
+
+/* Color del thumb (la parte deslizable del scrollbar) */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Cambia el color del thumb cuando se desplaza */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Para Firefox */
+/* Ancho del scrollbar */
+* {
+    scrollbar-width: thin; /* Puede ser "auto" o "thin" */
+}
+
+/* Color del thumb (la parte deslizable del scrollbar) */
+* {
+    scrollbar-color: #888 #f1f1f1; /* thumb-color track-color */
+}
+
+/* Cambia el color del thumb cuando se desplaza */
+*:hover {
+    scrollbar-color: #555 #f1f1f1; /* thumb-color track-color */
+}

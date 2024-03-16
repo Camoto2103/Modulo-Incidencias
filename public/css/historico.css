@@ -1,0 +1,90 @@
+:root {
+    --midBlue: #002b8c;
+    --darkgrey: #7d7d7d;
+    --textBlue: #001950;
+    --white: #fff;
+    --lightGrey: #f7f7f7;
+    --lightBlue: #00c8fa;
+}
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url(../font/font/ROBOTO/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: CronosBold;
+    src: url(../font/font/CRONOS/CronosPro-Bold.otf );
+}
+
+@font-face {
+    font-family: CronosRegular;
+    src: url(../font/font/CRONOS/CronosPro-Regular.otf );
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(1, 20, 115, 1) 50%, rgba(55, 191, 235, 1) 92%);
+    color: var(--white);
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;
+    height: 90px;
+}
+
+.header {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-family: CronoRegular;
+}
+
+/*TENER TODO ALINIANDO EN LA MITAD DEL BODY*/
+.principal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#tablate {
+    margin-top: 20px;
+    display: inline-block;
+    width: 35vw;
+    height: 75vh;
+    border-radius: 5px;
+    overflow: auto;
+    font-family: RobotoRegular;
+    background-color: #f7f7f7 !important;
+    border-collapse: collapse;
+}
+
+#tablate thead {
+    width: 100%; /* Asegura que el encabezado ocupe el 100% del ancho */
+    background-color: var(--lightBlue);
+}
+
+#tablate th {
+    padding: 5px 10px;
+}
+
+#tablate td {
+    color: #7d7d7d;
+    min-height: 50px;
+    padding: 5px 10px;
+}
+
+#tablate th {
+    background-color: #00c8fa;
+}
+
